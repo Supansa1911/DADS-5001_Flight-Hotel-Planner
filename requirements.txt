@@ -7,5 +7,4 @@ openpyxl
 xgboost
 modules.data_prep
 pip install duckdb
-pip install --upgrade pip
 duckdb
