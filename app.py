@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from modules.data_prep import prepare
-pip install duckdb
 import duckdb
 from pymongo import MongoClient
 import plotly.express as px
