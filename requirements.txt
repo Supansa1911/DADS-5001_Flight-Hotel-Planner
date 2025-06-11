@@ -1,0 +1,44 @@
+streamlit
+pandas
+numpy
+pydeck
+plotly
+openpyxl
+xgboost
+duckdb
+modules.data_prep 
+prepare
+duckdb
+pymongo
+MongoClient
+plotly.express
+google.generativeai
+sklearn.preprocessing  
+LabelEncoder 
+StandardScaler
+sklearn.decomposition  
+PCA
+sklearn.cluster  
+KMeans
+matplotlib.pyplot
+seaborn
+matplotlib
+matplotlib.rc('font', family='Tahoma')  # หรือ 'TH Sarabun New' ถ้ามี
+matplotlib.rcParams['font.family'] = 'Tahoma'
+scipy.stats 
+pearsonr
+sklearn.linear_model 
+LinearRegression 
+Ridge
+sklearn.ensemble  
+RandomForestRegressor
+GradientBoostingRegressor
+sklearn.model_selection  
+train_test_split
+cross_val_score
+sklearn.metrics  
+mean_squared_error 
+r2_score
+pymongo
+datetime import datetime
+uuid
