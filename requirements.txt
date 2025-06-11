@@ -5,4 +5,4 @@ pydeck
 plotly
 openpyxl
 xgboost
-data_prep
+modules.data_prep
