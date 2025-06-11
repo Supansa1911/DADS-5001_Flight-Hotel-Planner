@@ -120,8 +120,14 @@ if page == "🏠 หน้าแรก":
        
 
 elif page == "🏨 Hotel Analysis":
-    df_hotel = prepare("Hotel")
+    #df_hotel = prepare("Hotel")
+    #df_hotel.columns = df_hotel.columns.str.strip()  # ล้างช่องว่าง
+    df_hotel = pd.read_excel("flight_hotel_clean.xlsx.xlsx", sheet_name="Hotel")
+    df_encoded = df_hotel.copy()
     df_hotel.columns = df_hotel.columns.str.strip()  # ล้างช่องว่าง
+    df_hotel.columns = df_hotel.columns.str.strip().str.replace(" ", "_").str.lower()
+    df_hotel.dropna(inplace=True)
+    df_hotel.reset_index(drop=True, inplace=True)
 
     st.header("🏨 Hotel Analysis")
     st.markdown("""
@@ -178,7 +184,11 @@ elif page == "🏨 Hotel Analysis":
 
 
 elif page == "✈️ Flight Analysis":
-    df_flight = prepare("Flight (2)")
+    #df_flight = prepare("Flight (2)")
+    df_flight = pd.read_excel("flight_hotel_clean.xlsx.xlsx", sheet_name="Flight (2)")
+    df_encoded = df_flight.copy()
+
+    
     st.header("✈️ Flight Analysis")
     st.markdown("""
     ตารางข้อมูลเที่ยวบิน โดยมีชื่อสายการบิน, การต่อเครื่อง, เวลาออกเดินทาง, เวลาถึง, ราคา, ราคาที่มีส่วนลด และจำนวนชั่วโมง            
