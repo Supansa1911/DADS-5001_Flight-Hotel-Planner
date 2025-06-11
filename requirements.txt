@@ -6,3 +6,4 @@ plotly
 openpyxl
 xgboost
 modules.data_prep
+duckdb
