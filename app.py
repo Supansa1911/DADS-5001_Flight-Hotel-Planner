@@ -1098,7 +1098,7 @@ elif page == "🎫 Booking System":
         
         # Combined booking form
         with st.form("เที่ยวบิน + ที่พัก"):
-            st.subheader("ข้อมูลการจองเที่วบิน + ที่พัก")
+            st.subheader("ข้อมูลการจองเที่ยวบิน + ที่พัก")
             
             col3, col4 = st.columns(2)
             with col3:
@@ -1123,9 +1123,9 @@ elif page == "🎫 Booking System":
                     nights = (check_out_date - check_in_date).days
                     flight_cost = selected_flight.get('ราคาเต็ม(บาท)', 0) * passengers
                     hotel_cost = selected_hotel.get('ราคาต่อคืน', 0) * nights * rooms
-                    total_cost = flight_cost + hotel_cost
-                    discount = total_cost * 0.1  # 10% package discount
-                    final_cost = total_cost - discount
+                    #total_cost = flight_cost + hotel_cost
+                    #discount = total_cost * 0.1  # 10% package discount
+                    #final_cost = total_cost - discount
                     
                     # Prepare booking data
                     booking_data = {
@@ -1144,8 +1144,8 @@ elif page == "🎫 Booking System":
                         'hotel_details': selected_hotel,
                         'flight_cost': flight_cost,
                         'hotel_cost': hotel_cost,
-                        'discount': discount,
-                        'total_cost': final_cost
+                        #'discount': discount,
+                        #'total_cost': final_cost
                     }
                     
                     # Remove MongoDB _ids
@@ -1161,11 +1161,11 @@ elif page == "🎫 Booking System":
                         
                         # Show cost breakdown
                         st.subheader("รายละเอียด:")
-                        st.write(f"เที่ยวบิน: ฿{flight_cost:,.0f}")
+                        #st.write(f"เที่ยวบิน: ฿{flight_cost:,.0f}")
                         st.write(f"ที่พัก: ฿{hotel_cost:,.0f}")
-                        st.write(f"รวม: ฿{total_cost:,.0f}")
-                        st.write(f"ส่วนลด (10%): -฿{discount:,.0f}")
-                        st.write(f"**สุทธิ: ฿{final_cost:,.0f}**")
+                        #st.write(f"รวม: ฿{total_cost:,.0f}")
+                        #st.write(f"ส่วนลด (10%): -฿{discount:,.0f}")
+                        #st.write(f"**สุทธิ: ฿{final_cost:,.0f}**")
                     else:
                         st.error("การจองผิดพลาด โปรดลองใหม่อีกครั้ง.")
                 else:
